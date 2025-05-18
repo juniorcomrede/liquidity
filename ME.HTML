@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LPR - Liquidity Peak Rejection</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #000000, #1a1a1a);
+      color: white;
+    }
+    .centered {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .card {
+      background-color: #2d2d2d;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      animation: fadeInUp 1s ease forwards;
+    }
+    .main-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+      animation: fadeInUp 1s ease forwards;
+    }
+    h1.gradient-text {
+      font-size: 3rem;
+      font-weight: 800;
+      text-align: center;
+      background: linear-gradient(to right, #ec4899, #ef4444, #facc15);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .section {
+      background-color: #3b3b3b;
+      padding: 2rem;
+      border-radius: 1rem;
+      margin-top: 2rem;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+    }
+    .image-box {
+      background-color: #111;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .image-box img {
+      max-width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+    input {
+      background-color: #444;
+      color: white;
+      border: 1px solid #555;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+    }
+    button {
+      background-color: #2563eb;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1d4ed8;
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .small-heading {
+      text-align: center;
+      color: #999;
+      font-size: 0.9rem;
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      color: #ccc;
+    }
+    table, th, td {
+      border: 1px solid #555;
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+
+<div id="app">
+  <div class="centered" id="login-section">
+    <div class="card">
+      <h2 style="text-align:center">Enter Access Password</h2>
+      <input type="password" id="passwordInput" placeholder="Password" />
+      <button onclick="checkPassword()">Enter</button>
+    </div>
+  </div>
+
+  <div id="main-section" style="display:none">
+    <div class="main-content">
+      <h1 class="gradient-text">Liquidity Peak Rejection (LPR)</h1>
+      <p class="small-heading">Founded strategy by NAJIH-KNP</p>
+
+      <div class="section">
+        <h2 style="color:#60a5fa;">🧠 What is LPR?</h2>
+        <p>Liquidity Peak Rejection (LPR) is a concept by Najih that identifies high-probability reversal or continuation points after a major liquidity sweep. LPR focuses on the rejection of price after it taps key liquidity zones.</p>
+        <ul>
+          <li><strong>HTF Sweep:</strong> Price aggressively hits liquidity (high/low).</li>
+          <li><strong>Trap Setup:</strong> Retail traders enter breakout; smart money rejects move.</li>
+          <li><strong>Displacement:</strong> Strong move forms OB or FVG — signal to enter.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2 style="color:#34d399;">🎯 Anatomy of a Valid LPR</h2>
+        <ul>
+          <li>✅ Liquidity Sweep (Equal Highs/Lows or Swing Points)</li>
+          <li>✅ Strong Rejection Candle (Wick/Engulfing)</li>
+          <li>✅ Fair Value Gap / Order Block Formation</li>
+          <li>✅ No Re-Entry into Swept Zone</li>
+          <li>✅ Smart Money Confirmation</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2 style="color:#facc15;">📘 Entry Checklist</h2>
+        <ul>
+          <li>✅ HTF Liquidity Sweep Identified</li>
+          <li>✅ Displacement Candle & Imbalance Present</li>
+          <li>✅ OB or FVG Nearby</li>
+          <li>✅ LTF Entry Setup (Mitigation)</li>
+          <li>✅ SL Above OB / Swept Wick</li>
+          <li>✅ TP at Next Liquidity Pool</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2 style="color:#f472b6;">🧪 LPR vs. False Trap</h2>
+        <table>
+          <thead>
+            <tr><th>Feature</th><th>LPR</th><th>False Trap</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Big wick + rejection</td><td>✅</td><td>❌</td></tr>
+            <tr><td>Clear imbalance</td><td>✅</td><td>❌</td></tr>
+            <tr><td>Smart Money Reaction</td><td>✅</td><td>❌</td></tr>
+            <tr><td>OB holds</td><td>✅</td><td>❌</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="image-box">
+        <h3 style="color:#f472b6;">Example Chart / Diagram</h3>
+        <img src="NAJIH.png" alt="LPR Chart Example"/>
+        <p style="margin-top:1rem; color:#aaa;">This is where you showcase your Liquidity Peak Rejection chart or visual illustration.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const correctPassword = 'lpraccess';
+
+  function checkPassword() {
+    const input = document.getElementById('passwordInput').value;
+    if (input === correctPassword) {
+      document.getElementById('login-section').style.display = 'none';
+      document.getElementById('main-section').style.display = 'block';
+    } else {
+      alert('Incorrect password!');
+    }
+  }
+</script>
+
+</body>
+</html>
