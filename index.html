@@ -60,6 +60,18 @@
       border-radius: 1rem;
       box-shadow: 0 0 20px rgba(255,255,255,0.1);
     }
+    .image-box {
+      background-color: #111;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .image-box img {
+      max-width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
     input, button {
       width: 100%;
       padding: 0.75rem;
@@ -128,8 +140,8 @@
 <div id="app">
   <div class="centered" id="login-section">
     <div class="card">
-      <h2 style="text-align:center">Enter Access Password</h2>
-      <input type="password" id="passwordInput" placeholder="lpraccess  (right-now-only)" />
+      <h2 style="text-align:center">Enter Access Code</h2>
+      <input type="password" id="passwordInput" placeholder="lpraccess (right-now-only)" />
       <button onclick="checkPassword()">Enter</button>
     </div>
   </div>
@@ -141,11 +153,13 @@
 
       <div class="section">
         <h2 style="color:#60a5fa;">🧠 What is LPR?</h2>
-        <p>Liquidity Peak Rejection (LPR) is a concept by Najih that identifies high-probability reversal or continuation points after a major liquidity sweep. LPR focuses on the rejection of price after it taps key liquidity zones.</p>
+        <p>LPR is a market concept discovered by Muhammed Najih that identifies high-probability reversal or continuation points after a major liquidity sweep, focusing on price behavior around peak liquidity zones.
+
+LPR is the moment where the market sweeps liquidity (usually at a key high/low), reacts with a strong displacement, and rejects further continuation into that zone — signaling smart money has taken control.</p>
         <ul>
           <li><strong>HTF Sweep:</strong> Price aggressively hits liquidity (high/low).</li>
           <li><strong>Trap Setup:</strong> Retail traders enter breakout; smart money rejects move.</li>
-          <li><strong>Displacement:</strong> Strong move forms OB or FVG — signal to enter.</li>
+          <li><strong>Displacement:</strong> Strong move forms OB or FVG — signal to the next entry.</li>
         </ul>
       </div>
 
@@ -164,9 +178,9 @@
         <h2 style="color:#facc15;">📘 Entry Checklist</h2>
         <ul>
           <li>✅ HTF Liquidity Sweep Identified</li>
-          <li>✅ Displacement Candle & Imbalance Present</li>
-          <li>✅ OB or FVG Nearby</li>
-          <li>✅ LTF Entry Setup (Mitigation)</li>
+          <li>✅ Displacement Candle Shooting star or Engulfing</li>
+          <li>✅ OB or FVG Will Present due to displacement</li>
+          <li>✅ LTF Entry Setup On the Candle of After LPR Or (Mitigation on OB)</li>
           <li>✅ SL Above OB / Swept Wick</li>
           <li>✅ TP at Next Liquidity Pool</li>
         </ul>
@@ -190,7 +204,12 @@
       <div class="image-box">
         <h3 style="color:#f472b6;">Example Chart / Diagram</h3>
         <img src="NAJIH.png" alt="LPR Chart Example"/>
-        <p style="margin-top:1rem; color:#aaa;">This is where you showcase your Liquidity Peak Rejection chart or visual illustration.</p>
+        <p style="margin-top:1rem; color:#aaa;">This is Liquidity Peak Rejection chart GO AND TRADE !.</p>
+      </div>
+      <div class="image-box">
+        <h3 style="color:#f472b6;">Example Candle</h3>
+        <img src="LPR.png" alt="LPR Candle Example"/>
+        <p style="margin-top:1rem; color:#aaa;">This is the LPR Candle, Trust your process.</p>
       </div>
     </div>
   </div>
