@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SECURED BY OWNER</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #000000, #1a1a1a);
+      color: white;
+    }
+    .centered {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .card {
+      background-color: #2d2d2d;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: #eab400;
+      animation: fadeInUp 1s ease forwards;
+    }
+    .main-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+      animation: fadeInUp 2s ease forwards;
+    }
+    input, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+    input {
+      background-color: #444;
+      color: white;
+      border: 1px solid #555;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+    }
+    button {
+      background-color: #eab400;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d1a205;
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="centered" id="login-section">
+    <div class="card">
+      <h2 style="text-align:center">PAGE IS 🔐</h2>
+      <input type="password" id="passwordInput" placeholder="Enter your password please!" />
+      <button onclick="checkPassword()">Enter</button>
+    </div>
+  </div>
+<script>
+  const correctPassword = '1';
+
+  function checkPassword() {
+    const input = document.getElementById('passwordInput').value;
+    if (input === correctPassword) {
+      window.location.href = "index.html"
+    } else {
+      alert('I think... your try is wrong!!😏, Messege me on instagram to get the password!😁');
+      alert('username🔸 : najeyxx');
+    }
+  }
+</script>
+
+</body>
+</html>
